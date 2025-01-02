@@ -1,5 +1,8 @@
 # Netflix Data Analysis Project
 
+![Netflix Logo](https://github.com/Neeraj-Kondaveeti/Data-Analysis-Projects/blob/main/Netflix_Analysis_Project/Netflix-Logo.webp)
+
+
 This project involves analyzing Netflix data to derive insights about the platform's content library. Using a structured SQL database derived from a CSV dataset, various queries are executed to uncover patterns, trends, and valuable information for business decisions.
 
 ---
