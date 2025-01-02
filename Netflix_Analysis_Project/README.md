@@ -1,120 +1,111 @@
-# Netflix Data Analysis Project
+# Netflix Data Analysis and Machine Learning Project
 
 ![Netflix Logo](https://github.com/Neeraj-Kondaveeti/Data-Analysis-Projects/blob/main/Netflix_Analysis_Project/Netflix-Logo.webp)
 
-
-This project involves analyzing Netflix data to derive insights about the platform's content library. Using a structured SQL database derived from a CSV dataset, various queries are executed to uncover patterns, trends, and valuable information for business decisions.
-
----
-
 ## Project Overview
+This project is a comprehensive exploration of the Netflix dataset, integrating SQL analysis, Python-based data visualization, recommendation system development, sentiment analysis, and predictive modeling. It demonstrates the application of data analysis and machine learning techniques to extract insights, predict trends, and create interactive tools.
 
-### Objective
-The primary objective of this project is to:
-- Analyze Netflix's content catalog using SQL queries.
-- Provide insights into content distribution, trends, and other critical metrics.
-- Practice and demonstrate proficiency in SQL for data analysis.
+## Dataset Description
+The Netflix dataset contains information on 8,807 titles, including:
+- **Type**: Movie or TV Show
+- **Title**: Name of the content
+- **Director**: Directors involved
+- **Cast**: Cast members
+- **Country**: Country of production
+- **Date Added**: Date content was added to Netflix
+- **Release Year**: Year of release
+- **Rating**: Content rating (e.g., PG, R)
+- **Duration**: Length of movies or number of seasons for TV shows
+- **Listed In**: Genres/categories
+- **Description**: Brief summary of the content
 
-### Dataset
-**Filename:** `netflix_titles.csv`
+## Modules
 
-The dataset contains metadata about Netflix's titles, including:
-- `show_id`: Unique identifier for each show.
-- `type`: Type of content (e.g., Movie, TV Show).
-- `title`: Name of the show.
-- `director`: Director of the show (if available).
-- `cast`: List of actors involved.
-- `country`: Country where the show was produced.
-- `date_added`: Date the show was added to Netflix.
-- `release_year`: Year the show was released.
-- `rating`: Content rating (e.g., TV-MA, PG-13).
-- `duration`: Duration of the content (minutes or number of seasons).
-- `listed_in`: Genres/categories of the content.
-- `description`: Brief description of the show.
+### 1. SQL Analysis
+- **Objective**: Extract foundational insights from the Netflix database.
+- **Tasks**:
+  - Create and populate the `netflix` table.
+  - Analyze content distribution by genres, countries, and ratings.
+  - Identify trends and popular categories.
+- **Tools Used**: SQL.
 
----
+### 2. Python Data Analysis and Visualization
+- **Objective**: Perform exploratory data analysis and visualize trends.
+- **Tasks**:
+  - Identify missing data using heatmaps.
+  - Visualize content distribution by year, genre, and country.
+  - Generate insights on top directors, cast members, and content durations.
+- **Tools Used**: Python, pandas, matplotlib, seaborn, plotly.
 
-## Project Workflow
+### 3. Recommendation System
+- **Objective**: Build an interactive recommendation engine.
+- **Tasks**:
+  - Use cosine similarity to recommend similar titles based on genres.
+  - Integrate with a Dash web application for user interaction.
+  - Implement filters for genres, release year, and content type.
+- **Tools Used**: Python, Dash, sklearn, fuzzywuzzy.
 
-### 1. Data Preparation
-The dataset is imported into a SQL database, with a table named `netflix` created to store the data. The following steps are performed:
-- Dropping any existing `netflix` table to avoid conflicts.
-- Creating the `netflix` table with appropriate data types for each column.
-- Verifying successful data import using exploratory queries.
+### 4. Sentiment Analysis
+- **Objective**: Analyze sentiment polarity in content titles.
+- **Tasks**:
+  - Apply TextBlob to score sentiments.
+  - Visualize sentiment distributions.
+  - Highlight the most positive and negative titles.
+- **Tools Used**: Python, pandas, TextBlob, matplotlib, seaborn.
 
-### 2. SQL Queries
-Various SQL queries are executed to analyze the data. Highlights include:
-- **Content Distribution:**
-  - Count of Movies vs. TV Shows.
-  - Distribution of content by rating and genre.
-- **Temporal Analysis:**
-  - Number of shows added each year.
-  - Trends in release years for content.
-- **Country-Specific Insights:**
-  - Top countries contributing to the content library.
-- **Director and Cast Analysis:**
-  - Most frequent directors and actors in the dataset.
+### 5. Predictive Analysis
+- **Objective**: Predict trends and classify content.
+- **Tasks**:
+  - Perform regression analysis to predict future trends in content addition.
+  - Use K-means clustering to group content based on metadata.
+  - Evaluate model performance with visualization.
+- **Tools Used**: Python, sklearn, matplotlib, numpy.
 
-### 3. Insights
-Key insights are derived, including:
-- Dominant genres on Netflix.
-- Yearly trends in content additions.
-- Popular countries of production.
-- Viewer preferences based on content rating.
+## Connection Between Modules
+The modules complement each other to provide a unified analysis:
+- **SQL Analysis** builds the foundation by preparing and exploring the dataset.
+- **Python Analysis** visualizes trends and insights, bridging raw data with storytelling.
+- **Recommendation System** applies insights interactively, enabling user engagement.
+- **Sentiment Analysis** explores emotional aspects of the dataset, adding depth.
+- **Predictive Analysis** extends the project into future trend forecasting and clustering.
 
----
+## Technologies Used
+- **Languages**: SQL, Python
+- **Libraries**: pandas, matplotlib, seaborn, plotly, Dash, sklearn, TextBlob, fuzzywuzzy
+- **Tools**: Jupyter Notebooks, Dash Web Framework
 
-## Folder Structure
+## How to Run
+### 1. Clone the Repository
+```bash
+git clone https://github.com/your-repo/netflix-analysis
+cd netflix-analysis
+```
 
-- **`data/`**: Contains the original `netflix_titles.csv` dataset.
-- **`scripts/`**: SQL script file (`NetflixSQLproject.sql`) for creating the database, importing data, and running queries.
+### 2. Set Up Environment
+```bash
+pip install -r requirements.txt
+```
 
----
+### 3. Execute Modules
+- **SQL Analysis**: Use any SQL client to execute the queries in `NetflixSQLproject.sql`.
+- **Python Notebooks**: Run Jupyter Notebooks for analysis, recommendation system, and predictive modeling.
+- **Recommendation System Dashboard**:
+  ```bash
+  python app.py
+  ```
 
-## Prerequisites
-To run the project, ensure the following:
+## Key Insights
+- The United States, India, and the United Kingdom dominate content production.
+- The recommendation system accurately suggests similar titles.
+- Sentiment analysis reveals a neutral to positive tone in most titles.
+- Predictive modeling effectively forecasts trends in content addition.
 
-### Software
-- SQL Server/MySQL/PostgreSQL (compatible with the provided SQL code).
-- A SQL client or IDE (e.g., MySQL Workbench, DBeaver).
+## Conclusion
+This project integrates multiple data science techniques to provide a comprehensive analysis of the Netflix dataset. It showcases expertise in SQL, data visualization, machine learning, and interactive application development.
 
-### Steps
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/username/netflix-analysis-project.git
-   ```
-2. Load the `netflix_titles.csv` into your local environment.
-3. Execute the SQL script (`NetflixSQLproject.sql`) in your SQL client.
-4. Run and modify queries as needed.
+## Future Scope
+- Incorporate live data for real-time analysis.
+- Use advanced NLP models for deeper sentiment analysis.
+- Enhance recommendation system with collaborative filtering.
+- Expand predictive modeling to include other metadata features.
 
----
-
-## How to Use
-
-1. **Import Data**:
-   - Ensure the `netflix_titles.csv` file is accessible.
-   - Execute the table creation and data import sections of the SQL script.
-2. **Run Analysis**:
-   - Use the predefined queries to analyze the data.
-   - Customize or add queries for additional insights.
-3. **Interpret Results**:
-   - Analyze the query outputs to derive meaningful conclusions.
-
----
-
-## Future Enhancements
-
-- Incorporate visualizations using tools like Tableau or Python.
-- Automate SQL query execution and reporting.
-- Expand the dataset with real-time updates for more dynamic analysis.
-
----
-
-## Contact
-For questions or feedback, reach out via:
-- **Email**: [neerajkondaveeti1901@gmail.com](mailto:neerajkondaveeti1901@gmail.com.com)
-- **GitHub**: [Your GitHub Profile](https://github.com/Neeraj-Kondaveeti)
-
----
-
-Explore and uncover Netflix trends with data-driven insights!
