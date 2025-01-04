@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project focuses on analyzing Uber trip data to extract valuable insights, implement machine learning models, and create interactive dashboards for visual exploration. It incorporates advanced features such as geospatial analysis, sentiment analysis, cost analysis, and predictive modeling, making it an ideal showcase for a master's-level resume project.
+This project focuses on analyzing Uber trip data to extract valuable insights, implement machine learning models, and create interactive dashboards for visual exploration. It incorporates advanced features such as geospatial analysis, sentiment analysis, cost analysis.
 
 ---
 
