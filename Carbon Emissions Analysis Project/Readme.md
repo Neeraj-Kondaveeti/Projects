@@ -38,13 +38,6 @@ Ensure the following are installed on your system:
    pip install -r requirements.txt
    ```
 
-### Running the Dashboard
-1. Launch the application:
-   ```bash
-   python app.py
-   ```
-2. Open the local server URL (usually `http://127.0.0.1:8050`) in your web browser.
-
 ## Dataset
 The data is sourced from the EPA’s Greenhouse Gas Reporting Program (GHGRP) and includes:
 - Annual emissions data (2010-2022)
