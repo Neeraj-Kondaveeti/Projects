@@ -130,9 +130,9 @@ pip install pandas numpy matplotlib seaborn scikit-learn dash plotly fpdf geopy
 
 ## Key Insights
 
-- **Average Trip Cost**: `$<calculated_value>`
-- **Total Miles Traveled**: `<calculated_value>` miles
-- **Most Common Trip Day**: `<calculated_value>`
+- **Average Trip Cost**: `$24.31`
+- **Total Miles Traveled**: `12,132.6 miles` 
+- **Most Common Trip Day**: `Friday`
 
 ---
 
